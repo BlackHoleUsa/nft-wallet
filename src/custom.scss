@@ -1,17 +1,13 @@
 $theme-colors: (
   'primary': #1E1B24,
   'secondary': #282430,
-  'lightSecondary': #4f536b,
-  'lightPrimary': #2824305E,
   'white': #ffffff,
   'black': #000000,
-  'roadMap': #76757A,
-  'skyblue': #2BE5FE,
   'grey': #f1f1f1,
   'whiteSmoke': #999999,
-  'carmine': #D70040,
-  'greyDark': #C8C8C8,
-  'yellow': #F4B328
+  'orange': #FF8D00,
+  'green': #00D983,
+  'lightBlack': #313942
 );
 
 @import 'node_modules/bootstrap/scss/bootstrap';

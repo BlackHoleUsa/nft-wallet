@@ -1,8 +1,8 @@
 import React from 'react';
 import './Sidebar.css';
-import { sidebarContent } from '../../Assets/Data';
+import { sidebarContent } from 'Assets/Data';
 import { Avatar } from '../Avatar/Avatar';
-import { Images } from '../../Assets/Images';
+import { Images } from 'Assets/Images';
 import { SidebarItem } from './SidebarItem';
 
 const Sidebar = () => {

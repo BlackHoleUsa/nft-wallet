@@ -1,5 +1,9 @@
 import React from "react";
+import { FlexColumn } from "components/FlexColumn/FlexColumn";
 import './Layout.css';
+import { FlexRow } from "components/FlexRow/FlexRow";
+import Sidebar from "components/Sidebar/Sidebar";
+import { Element } from "components/Element/Element";
 
 class MainLayout extends React.Component {
 
@@ -16,9 +20,12 @@ class MainLayout extends React.Component {
     
         if (isLogin) {
             return (
-                <div className="w-100 app-flex-column">
-                    { children }
-                </div>
+                <FlexColumn>
+                    <FlexRow className="align-items-start">
+                        <Sidebar />
+                        <Element className="layout-content"> { children } </Element>
+                    </FlexRow>
+                </FlexColumn>
             )
         }
         else return children;    
