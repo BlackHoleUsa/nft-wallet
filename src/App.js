@@ -6,6 +6,7 @@ import { Routes } from 'Routes/Routes';
 import MainLayout from "hoc/Layout/Layout";
 import Dashboard from 'screens/Dashboard/Dashboard';
 import PublicRoute from "Routes/public.routes";
+import PrivateRoute from "Routes/private.routes";
 
 const NftWallet = (props) => {
 
@@ -17,7 +18,9 @@ const NftWallet = (props) => {
 
       { location?.pathname === "/" && <Redirect exact to={`/${Routes.wallet}`} /> }
       <MainLayout isLogin={true}>        
-        <PublicRoute exact={true} path={`/${Routes.wallet}`} component={Dashboard} restricted={true} />
+        <PrivateRoute exact={true} path={`/${Routes.wallet}`} 
+          component={Dashboard} restricted={true} auth={{ loginAuth: true }}
+        />
       </MainLayout>
     </Switch>
 

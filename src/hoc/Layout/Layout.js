@@ -20,7 +20,7 @@ class MainLayout extends React.Component {
     
         if (isLogin) {
             return (
-                <FlexColumn>
+                <FlexColumn className="w-100 h-100">
                     <FlexRow className="align-items-start">
                         <Sidebar />
                         <Element className="layout-content"> { children } </Element>

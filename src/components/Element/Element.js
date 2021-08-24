@@ -1,8 +1,8 @@
 import React from 'react';
 
-export const Element = ({ className, children }) => {
+export const Element = ({ className, children, style }) => {
     return(
-        <div className={className}>
+        <div className={className} style={style}>
             {children}
         </div>
     );

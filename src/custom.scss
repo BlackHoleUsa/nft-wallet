@@ -8,7 +8,11 @@ $theme-colors: (
   'orange': #FF8D00,
   'green': #00D983,
   'lightBlack': #313942,
-  'grey-cc-60': #585858
+  'darkBlack': #141414,
+  'grey-cc-60': #585858,
+  'grey-cc-50': #82867D,
+  'grey-cc-70': #8C8C8C,
+  'grey-shadow': #FFF7FB
 );
 
 @import 'node_modules/bootstrap/scss/bootstrap';
