@@ -1,31 +1,33 @@
 import React from 'react';
 import './Sidebar.css';
 import { sidebarContent } from 'Assets/Data';
-import { Avatar } from '../Avatar/Avatar';
 import { Images } from 'Assets/Images';
 import { SidebarItem } from './SidebarItem';
+import { FlexColumn } from 'components/FlexColumn/FlexColumn';
 
 const Sidebar = () => {
 
     return(
 
-        <div className="sidebar py-4">
+        <FlexColumn className="sidebar">
             
-            <div className="mx-4 mb-3">
-                <Avatar large name="logo" src={ Images.logo } />
+            <div className="mx-4">
+                <img alt="logo" src={Images.logo} className="logo" />
             </div>
 
-            <span className="text-white mx-4 py-3">Menu</span>
+            <span className="ml-5 py-3 font-14px font-helvetica text-uppercase">
+                Menu
+            </span>
 
-            <div className="app-flex-column">
+            <FlexColumn className="">
                 {
                     sidebarContent.map((sidebar, index) => (
                         <SidebarItem key={index} nav={sidebar} />
                     ))
                 }
-            </div>
+            </FlexColumn>
 
-        </div>
+        </FlexColumn>
 
     );
 
