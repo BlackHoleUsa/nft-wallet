@@ -1,0 +1,107 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100vh;
+}
+html {
+  font-size: 100%;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+}
+h1,
+p,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0 !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px !important;
+  height: 5px !important;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: lightgray;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  transition: all 0.4s;
+  background: var(--primary);
+}
+
+
+/* fonts added */
+@font-face {
+  font-family: "Helvetica";
+  src: local("Helvetica"),
+   url("./fonts/Helvetica.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SFRegular";
+  src: local("SFProTextRegular"),
+   url("./fonts/SF-Pro-Text-Regular.otf") format("opentype");
+  font-weight: 400 !important;
+}
+
+@font-face {
+  font-family: "SFMedium";
+  src: local("SFProTextMedium"),
+   url("./fonts/SF-Pro-Text-Medium.otf") format("opentype");
+  font-weight: 500 !important;
+}
+
+@font-face {
+  font-family: "SFBold";
+  src: local("SFProTextBold"),
+   url("./fonts/SF-Pro-Text-Bold.otf") format("opentype");
+   font-weight: bold;
+}
+
+@font-face {
+  font-family: "SFSemibold";
+  src: local("SFProTextSemibold"),
+   url("./fonts/SF-Pro-Text-Semibold.otf") format("opentype");
+  font-weight: 600 !important;
+}
+
+.font-helvetica{
+  font-family: "Helvetica" !important;  
+}
+
+.font-sf-regular{
+  font-family: "SFRegular" !important;  
+}
+
+.font-sf-medium{
+  font-family: "SFMedium" !important;  
+}
+
+.font-sf-bold{
+  font-family: "SFBold" !important;  
+}
+
+.font-sf-semibold{
+  font-family: "SFSemibold" !important;  
+}
