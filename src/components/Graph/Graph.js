@@ -4,6 +4,8 @@ import { FlexRow } from 'components/FlexRow/FlexRow';
 import { Element } from 'components/Element/Element';
 import { FlexColumn } from 'components/FlexColumn/FlexColumn';
 import { transactionData } from 'Assets/Data';
+import LineCharts from './GraphData';
+
 
 export const Graph = () => {
 
@@ -19,6 +21,8 @@ export const Graph = () => {
                     1BTC = $7,296.46
                 </Element>
             </FlexRow>
+
+            <LineCharts />
 
             <FlexColumn className="w-100 transactions-container">
                 <Element className="text-black font-16px font-helvetica mb-4 d-block">

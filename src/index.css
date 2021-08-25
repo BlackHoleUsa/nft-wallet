@@ -45,7 +45,7 @@ h6 {
   background: var(--orange);
   border-radius: 50px !important;
   -webkit-border-radius: 50px !important;
-  outline: 3px solid var(--orange);
+  outline: 2px solid var(--orange);
 }
 
 /* Handle on hover */

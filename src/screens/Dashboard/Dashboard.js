@@ -23,7 +23,7 @@ const Dashboard = () => {
     const [receiveMenu, setReceiveMenu] = useState(false);
 
     useEffect(() => {
-        runInterval();
+        // runInterval();
     });
 
     const runInterval = () => {
