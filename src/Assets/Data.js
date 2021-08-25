@@ -1,6 +1,7 @@
 import { Routes } from "../Routes/Routes";
 import { AiOutlineFolderOpen } from 'react-icons/ai';
 import { Images } from "./Images";
+import { FaLongArrowAltUp, FaLongArrowAltDown } from 'react-icons/fa';
 
 export const sidebarContent = [
     { 
@@ -75,5 +76,36 @@ export const coinsData = [
         balance: '8.3612 ETH',
         value: '$1463.49',
         portfolio: '70.11%'
+    }
+];
+
+export const transactionData = [
+    {
+        id: 1,
+        title: 'Sent USD',
+        date: '23 Feb,2020',
+        rate: '-$1,656.00',
+        icon: <FaLongArrowAltUp className="font-18px text-orange" />
+    },
+    {
+        id: 2,
+        title: 'Receive ETH',
+        date: '23 Feb,2020',
+        rate: '-$1,656.00',
+        icon: <FaLongArrowAltDown className="font-18px text-green" />
+    },
+    {
+        id: 1,
+        title: 'Sent USD',
+        date: '23 Feb,2020',
+        rate: '-$1,656.00',
+        icon: <FaLongArrowAltUp className="font-18px text-orange" />
+    },
+    {
+        id: 2,
+        title: 'Receive ETH',
+        date: '23 Feb,2020',
+        rate: '-$1,656.00',
+        icon: <FaLongArrowAltDown className="font-18px text-green" />
     }
 ];

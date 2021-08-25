@@ -57,8 +57,8 @@ const Dashboard = () => {
             </Element>
 
             <FlexColumn className="w-100 justify-content-center align-items-center mb-5">
-                <img alt="icon" src={Images.icon} className="mb-1" />
-                <Element className="font-sf-regular font-36px mb-1" style={{ color: 'var(--darkBlack)' }}>
+                <img alt="icon" src={Images.icon} className="mb-1" width="50px" />
+                <Element className="font-sf-regular font-30px mb-1" style={{ color: 'var(--darkBlack)' }}>
                     0.00
                     <sub className="font-sf-medium font-18px">ETH</sub>
                 </Element>

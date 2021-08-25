@@ -15,8 +15,8 @@ export const CoinListItem = (props) => {
     return(
 
         <FlexColumn className={`
-            w-100 py-3 mb-3 px-5 br-10px
-            py-2 mb-3 px-5 ${ active === index ? 'background-primary' : 'bg-white' }
+            w-100 py-3 mb-3 br-10px px-2
+            py-2 mb-3 ${ active === index ? 'background-primary' : 'bg-white' }
         `}>
         
             <FlexRow className={`w-100 align-items-center 
@@ -28,7 +28,7 @@ export const CoinListItem = (props) => {
             <FlexRow className={`w-100 align-items-center 
                 justify-content-between font-helvetica`}
            >
-            <FlexColumn className="mt-1 text-width">
+            <FlexColumn className="mt-1 coin-item-width align-items-center justify-content-center">
                 <span className={`
                     font-18px ${ index === 1 ? 'text-grey-cc-70' : index === 2 ? 'text-orange' : 'text-blue' }
                 `}>
@@ -36,11 +36,11 @@ export const CoinListItem = (props) => {
                 </span>
                 <span className="font-14px text-lightBlack mt-1">{item.subTitle}</span>
             </FlexColumn>
-            <span className="font-16px text-lightBlack">{item?.price}</span>
-            <span className="font-16px text-grey-cc-70">{item?.hChange}</span>
-            <span className="font-16px text-green">{item?.balance}</span>
-            <span className="font-16px text-lightBlack">{item?.value}</span>
-            <span className="font-16px text-lightBlack">{item?.portfolio}</span>
+            <span className="font-16px text-lightBlack coin-item-width text-center">{item?.price}</span>
+            <span className="font-16px text-grey-cc-70 coin-item-width text-center">{item?.hChange}</span>
+            <span className="font-16px text-green coin-item-width text-center">{item?.balance}</span>
+            <span className="font-16px text-lightBlack coin-item-width text-center">{item?.value}</span>
+            <span className="font-16px text-lightBlack coin-item-width text-center">{item?.portfolio}</span>
 
             </FlexRow>
         
@@ -55,8 +55,10 @@ const Header = ({ src, index }) => {
     const data = [src, 'PRICE', '24H CHANGE', 'YOUR BALANCE', 'VALUE', 'PORTFOLIO %'];
 
     return data?.map((text, i) => (
-        i === 0 ? <img alt="coin-logo" src={text} width={ index < 2 ? '35px' : '50px' } /> :
-        <span key={i} className="font-helvetica font-12px text-uppercase text-grey-cc-80 text-center">
+        i === 0 ? <span className="coin-item-width text-center">
+            <img alt="coin-logo" src={text} width={ index < 2 ? '35px' : '50px' } />
+        </span> :
+        <span key={i} className="font-helvetica font-12px text-uppercase text-grey-cc-80 text-center coin-item-width">
             { text }
         </span>
     ))
