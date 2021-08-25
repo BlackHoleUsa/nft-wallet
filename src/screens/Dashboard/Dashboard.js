@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Dashboard.css';
 
 import { Row, Col } from 'react-bootstrap';
@@ -8,11 +8,30 @@ import { Element } from 'components/Element/Element';
 import { BsBell } from 'react-icons/bs';
 import { Images } from 'Assets/Images';
 import { ActionButton } from 'components/ActionButton/ActionButton';
+import CustomModal from 'components/Modal/Modal';
+import { ReceivePopup } from 'components/ReceivePopup/ReceivePopup';
+import Pulse from 'react-reveal/Pulse';
+import { SendPopup } from 'components/SendPopup/SendPopup';
 
 const Dashboard = () => {
 
+    const [number, setNumber] = useState(0);
     const [sendMenu, setSendMenu] = useState(false);
     const [receiveMenu, setReceiveMenu] = useState(false);
+
+    useEffect(() => {
+        runInterval();
+    });
+
+    const runInterval = () => {
+        const interval = setInterval(() => {
+            setNumber(number => number+1);
+        }, 1000);
+
+        return () => {
+            clearInterval(interval);
+        }
+    }
 
     return(
 
@@ -26,7 +45,9 @@ const Dashboard = () => {
                         <Element className="bottom-line"></Element>
                     </FlexColumn>
                     <Element className="heading-section__bell position-relative app-flex-column justify-content-center align-items-center">
-                        <BsBell className="cursor-pointer-sort text-orange font-28px" />
+                        <Pulse spy={number}>
+                            <BsBell className="cursor-pointer-sort text-orange font-28px" />
+                        </Pulse>
                         <span className="position-absolute">1</span>
                     </Element>
                 </FlexRow>
@@ -53,7 +74,15 @@ const Dashboard = () => {
                 </FlexRow>
             </FlexColumn>        
 
-            
+            <CustomModal show={sendMenu} title="Send"
+                handleClose={() => setSendMenu(false)}>
+                <SendPopup />
+            </CustomModal>
+
+            <CustomModal show={receiveMenu}  title="Receive"
+                handleClose={() => setReceiveMenu(false)}>
+                <ReceivePopup />
+            </CustomModal>
 
         </FlexColumn>
 

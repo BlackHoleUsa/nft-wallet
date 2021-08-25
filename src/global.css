@@ -30,6 +30,10 @@
   font-size: 14px !important;
 }
 
+.font-12px{
+  font-size: 12px !important;
+}
+
 .font-11px{
   font-size: 11px !important;
 }
@@ -60,8 +64,19 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-}
+  }
 
+  .background-primary{
+    background: rgba(255, 141, 0, 0.15);
+  }
+
+  .br-10px{
+    border-radius: 10px;
+  }
+
+  .opacity-3{
+    opacity: 0.3;
+  }
 
 @media screen and (max-width: 767px) {
   
