@@ -48,8 +48,8 @@
 }
 
 .items-container{
-    height: 47vh;
+    height: 54vh;
     overflow-x: hidden;
     overflow-y: auto;
-    padding-right: 19px;
+    padding-right: 30px;
 }

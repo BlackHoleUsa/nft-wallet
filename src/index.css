@@ -30,24 +30,31 @@ h6 {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 5px !important;
-  height: 5px !important;
+  width: 3px !important;
+  scroll-behavior: smooth !important;
 }
+
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: lightgray;
+  background: var(--orange);
   border-radius: 50px;
   -webkit-border-radius: 50px;
 }
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--orange);
+  border-radius: 50px !important;
+  -webkit-border-radius: 50px !important;
+  outline: 3px solid var(--orange);
+}
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   transition: all 0.4s;
-  background: var(--primary);
+  background: var(--orange);
 }
+
+ 
 
 
 /* fonts added */

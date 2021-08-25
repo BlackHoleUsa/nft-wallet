@@ -84,14 +84,15 @@ const Dashboard = () => {
 
                 <Col xl={8} lg={8} md={12} sm={12}>
                     
-                    <Element className="font-16px font-helvetica d-block text-right 
-                        text-grey-cc-50 cursor-pointer-sort mb-4 pr-4"
-                        style={{ textDecoration: 'underline' }}
-                    >
-                        Add More +
-                    </Element>
-                    
                     <FlexColumn className="w-100 items-container">
+                        
+                        <Element className="font-16px font-helvetica d-block text-right 
+                            text-grey-cc-50 cursor-pointer-sort mb-4"
+                            style={{ textDecoration: 'underline' }}
+                        >
+                            Add More +
+                        </Element>
+
                         {
                             coinsData.map((item, i) => (
                                 <CoinListItem key={i} item={item} index={item?.id} />
