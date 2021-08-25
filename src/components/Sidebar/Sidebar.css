@@ -36,6 +36,6 @@
     position: relative;
     opacity: 1;
     transition: all .5s;
-    background: var(--white);
+    background: var(--grey-shadow);
     color: var(--black);
 }

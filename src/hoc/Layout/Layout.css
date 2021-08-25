@@ -1,5 +1,7 @@
 .layout-content{
     width: 78%;
     height: 100vh;
-    background: var(--white);
+    background: var(--grey-shadow);
+    overflow-y: auto;
+    overflow-x: hidden;
 }

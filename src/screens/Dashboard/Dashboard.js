@@ -12,6 +12,9 @@ import CustomModal from 'components/Modal/Modal';
 import { ReceivePopup } from 'components/ReceivePopup/ReceivePopup';
 import Pulse from 'react-reveal/Pulse';
 import { SendPopup } from 'components/SendPopup/SendPopup';
+import { coinsData } from 'Assets/Data';
+import { CoinListItem } from 'components/CoinListItem/CoinListItem';
+import { Graph } from 'components/Graph/Graph';
 
 const Dashboard = () => {
 
@@ -53,7 +56,7 @@ const Dashboard = () => {
                 </FlexRow>
             </Element>
 
-            <FlexColumn className="w-100 justify-content-center align-items-center">
+            <FlexColumn className="w-100 justify-content-center align-items-center mb-5">
                 <img alt="icon" src={Images.icon} className="mb-1" />
                 <Element className="font-sf-regular font-36px mb-1" style={{ color: 'var(--darkBlack)' }}>
                     0.00
@@ -73,6 +76,37 @@ const Dashboard = () => {
 
                 </FlexRow>
             </FlexColumn>        
+
+
+            {/* //main content */}
+
+            <Row className="">
+
+                <Col xl={8} lg={8} md={12} sm={12}>
+                    
+                    <Element className="font-16px font-helvetica d-block text-right 
+                        text-grey-cc-50 cursor-pointer-sort mb-4 pr-4"
+                        style={{ textDecoration: 'underline' }}
+                    >
+                        Add More +
+                    </Element>
+                    
+                    <FlexColumn className="w-100 items-container">
+                        {
+                            coinsData.map((item, i) => (
+                                <CoinListItem key={i} item={item} index={item?.id} />
+                            ))
+                        }
+                    </FlexColumn>
+
+                </Col>
+
+                <Col xl={4} lg={4} md={12} sm={12}>
+                    <Graph />
+                </Col>
+
+            </Row>
+
 
             <CustomModal show={sendMenu} title="Send"
                 handleClose={() => setSendMenu(false)}>

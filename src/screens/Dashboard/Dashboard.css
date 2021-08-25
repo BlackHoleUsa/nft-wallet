@@ -46,3 +46,10 @@
     top: -7px;
     right: -10px;
 }
+
+.items-container{
+    height: 47vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-right: 19px;
+}

@@ -78,6 +78,10 @@
     opacity: 0.3;
   }
 
+  .text-width{
+    width: 32px;
+  }
+
 @media screen and (max-width: 767px) {
   
   .remove-margins{
