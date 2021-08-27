@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Dashboard.css';
 import { NavLink } from 'react-router-dom';
 
@@ -22,26 +22,6 @@ const Dashboard = () => {
     const [number, setNumber] = useState(0);
     const [sendMenu, setSendMenu] = useState(false);
     const [receiveMenu, setReceiveMenu] = useState(false);
-    const [background, setBackground] = useState(false);
-
-    useEffect(() => {
-        if(window.screen.width < 768){
-            setBackground(true);
-        } else{
-            setBackground(false);
-        }
-        // runInterval();
-    }, [window.screen.width]);
-
-    const runInterval = () => {
-        const interval = setInterval(() => {
-            setNumber(number => number+1);
-        }, 1000);
-
-        return () => {
-            clearInterval(interval);
-        }
-    }
 
     return(
 
@@ -81,7 +61,7 @@ const Dashboard = () => {
                 <span className="text-center d-block">Select below assets to send, receive funds.</span>
             </FlexColumn>
 
-            <FlexColumn className="w-100 justify-content-center align-items-center mb-5" style={{ height: '25%' }}>
+            <FlexColumn className="w-100 justify-content-center align-items-center mb-5">
                 <img alt="icon" src={Images.icon} className="mb-1" width="50px" />
                 <Element className="font-sf-regular font-30px mb-1" style={{ color: 'var(--darkBlack)' }}>
                     0.00
@@ -120,7 +100,7 @@ const Dashboard = () => {
 
                         {
                             coinsData.map((item, i) => (
-                                <CoinListItem key={i} item={item} index={item?.id} background={background} />
+                                <CoinListItem key={i} item={item} index={item?.id} />
                             ))
                         }
                     </FlexColumn>

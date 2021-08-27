@@ -7,21 +7,37 @@ import { Element } from 'components/Element/Element';
 
 export const CoinListItem = (props) => {
 
-    const { index, item, background } = props;
+    const { index, item } = props;
 
     const [active, setActive] = useState(1);
     const [slice, setSlice] = useState(6);
+    const [background, setBackground] = useState(false);
 
     useEffect(() => {
+        const interval = setInterval(() => {
+            changeBackground();
+            changeSlice();
+        }, 1000);
+
+        return () => {
+            clearInterval(interval);
+        }
+    }, []);
+
+    const changeSlice = () => {
         if(window.screen.width < 551){
             setSlice(1);
         } else{
             setSlice(6);
         }
-    }, [window.screen.width]);
+    }
 
-    const clickItem = () => {
-
+    const changeBackground = () => {
+        if(window.screen.width < 768){
+            setBackground(true);
+        } else{
+            setBackground(false);
+        }
     }
 
     const items = [

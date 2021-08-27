@@ -10,6 +10,7 @@
     .layout-content{
         transition: all .4s ease-out;
         width: 100%;
+        height: 100%;
     }    
 }
 

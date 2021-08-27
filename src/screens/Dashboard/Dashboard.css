@@ -6,7 +6,7 @@
 .heading-section{
     padding: 45px 40px 0px 40px;
     position: relative;
-    height: 13%;
+    /* height: 13vh; */
 }
 
 .heading-section .headings > h6, .headings-sm > h6{
@@ -66,13 +66,6 @@
 }
 
 
-@media screen and (min-width: 768px) and (max-width: 991px){
-    .heading-section{
-        height: auto;
-        margin-bottom: 30px;
-    }
-}
-
 @media screen and (min-width: 1300px) {
     .heading-section .main-logo, .topbar{
         display: none;
@@ -80,6 +73,10 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1299px) {
+    .heading-section{
+        height: auto;
+        margin-bottom: 30px;
+    }
     .heading-section .main-logo, .topbar{
         display: block;
     }    
