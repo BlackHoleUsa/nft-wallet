@@ -22,10 +22,16 @@ const Dashboard = () => {
     const [number, setNumber] = useState(0);
     const [sendMenu, setSendMenu] = useState(false);
     const [receiveMenu, setReceiveMenu] = useState(false);
+    const [background, setBackground] = useState(false);
 
     useEffect(() => {
+        if(window.screen.width < 768){
+            setBackground(true);
+        } else{
+            setBackground(false);
+        }
         // runInterval();
-    });
+    }, [window.screen.width]);
 
     const runInterval = () => {
         const interval = setInterval(() => {
@@ -103,7 +109,7 @@ const Dashboard = () => {
 
                 <Col xl={8} lg={8} md={12} sm={12}>
                     
-                    <FlexColumn className="w-100 items-container">
+                    <FlexColumn className="items-container">
                         
                         <Element className="font-16px font-helvetica d-block text-right 
                             text-grey-cc-50 cursor-pointer-sort mb-4"
@@ -114,7 +120,7 @@ const Dashboard = () => {
 
                         {
                             coinsData.map((item, i) => (
-                                <CoinListItem key={i} item={item} index={item?.id} />
+                                <CoinListItem key={i} item={item} index={item?.id} background={background} />
                             ))
                         }
                     </FlexColumn>

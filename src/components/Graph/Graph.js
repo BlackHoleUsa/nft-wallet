@@ -11,10 +11,14 @@ export const Graph = () => {
 
     return(
 
-        <React.Fragment>
+        <FlexColumn className="">
+
+            <Element className="text-black font-helvetica mb-4 price-graph">
+                Price Graph
+            </Element>
 
             <FlexRow className="w-100 font-16px font-helvetica justify-content-between 
-                align-items-center mb-2 transactions-heading"
+                align-items-center mb-2 transactions-heading alignment-graph"
             >
                 <Element className="text-grey-cc-50 cursor-pointer-sort">
                     Price(30D):
@@ -24,10 +28,12 @@ export const Graph = () => {
                 </Element>
             </FlexRow>
 
-            <LineCharts />
+            <Element className="alignment-graph">
+                <LineCharts />
+            </Element>
 
             <FlexColumn className="w-100 transactions-container">
-                <Element className="text-black font-16px font-helvetica mb-4 d-block">
+                <Element className="text-black font-16px font-helvetica mb-4 d-block transactions-container__heading">
                     Transactions
                 </Element>
                 {
@@ -53,7 +59,7 @@ export const Graph = () => {
             
             </FlexColumn>
 
-        </React.Fragment>
+        </FlexColumn>
 
     );
 

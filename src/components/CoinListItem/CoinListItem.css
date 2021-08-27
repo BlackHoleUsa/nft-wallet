@@ -1,0 +1,32 @@
+.remove__title{
+    display: none;
+}
+
+.remove-content{
+    display: flex;
+}
+
+.show-sm-content{
+    display: none;
+}
+
+@media screen and (max-width: 550px) {
+    .top__title{
+        display: flex;
+        flex-direction: column !important;
+        width: 100%;
+        padding: 6px 0px 20px 0px;
+        border-bottom: 1px solid var(--orange);
+    }   
+    .remove__title{
+        display: flex;
+    }
+    .remove-content{
+        display: none;
+    }
+    .show-sm-content{
+        padding-top: 20px;
+        display: flex;
+    }
+    
+}
