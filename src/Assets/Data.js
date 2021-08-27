@@ -76,6 +76,39 @@ export const coinsData = [
         balance: '8.3612 ETH',
         value: '$1463.49',
         portfolio: '70.11%'
+    },
+    {
+        id: 1,
+        img: Images.icon,
+        title: 'Ethereum',
+        subTitle: 'ETH',
+        price: '$172.46',
+        hChange: '+1.29%',
+        balance: '8.3612 ETH',
+        value: '$1463.49',
+        portfolio: '70.11%'
+    },
+    {
+        id: 2,
+        img: Images.bitcoin,
+        title: 'Bitcoin',
+        subTitle: 'BTC',
+        price: '$172.46',
+        hChange: '+1.29%',
+        balance: '8.3612 ETH',
+        value: '$1463.49',
+        portfolio: '70.11%'
+    },
+    {
+        id: 3,
+        img: Images.dash,
+        title: 'Dash',
+        subTitle: 'DASH',
+        price: '$172.46',
+        hChange: '+1.29%',
+        balance: '8.3612 ETH',
+        value: '$1463.49',
+        portfolio: '70.11%'
     }
 ];
 

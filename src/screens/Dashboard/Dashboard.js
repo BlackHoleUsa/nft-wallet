@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Dashboard.css';
+import { NavLink } from 'react-router-dom';
 
 import { Row, Col } from 'react-bootstrap';
 import { FlexRow } from 'components/FlexRow/FlexRow';
@@ -12,7 +13,7 @@ import CustomModal from 'components/Modal/Modal';
 import { ReceivePopup } from 'components/ReceivePopup/ReceivePopup';
 import Pulse from 'react-reveal/Pulse';
 import { SendPopup } from 'components/SendPopup/SendPopup';
-import { coinsData } from 'Assets/Data';
+import { coinsData, sidebarContent } from 'Assets/Data';
 import { CoinListItem } from 'components/CoinListItem/CoinListItem';
 import { Graph } from 'components/Graph/Graph';
 
@@ -38,7 +39,7 @@ const Dashboard = () => {
 
     return(
 
-        <FlexColumn className="w-100 h-100 px-5">
+        <FlexColumn className="w-100 h-100 main-content-wrapper">
 
             <Element className="heading-section">
                 <FlexRow className="w-100 justify-content-between align-items-center h-auto">
@@ -47,16 +48,34 @@ const Dashboard = () => {
                         <span>Select below assets to send, receive funds.</span>
                         <Element className="bottom-line"></Element>
                     </FlexColumn>
+                    <Element className="main-logo">
+                        <img alt="logo" src={Images.logo} width="250px" height="68px" />
+                    </Element>
+                    <Element className="topbar">
+                        <FlexRow className="w-auto align-items-center">
+                            { sidebarContent.map((item, i) => (
+                                <NavLink key={i} to={`/${item?.route}`} className="topbar__link mr-2">
+                                    <span className="mr-2 text-orange">{item.icon}</span>
+                                    <p className="font-20px">{item.item}</p>
+                                </NavLink>
+                            )) }
+                        </FlexRow>
+                    </Element>
                     <Element className="heading-section__bell position-relative app-flex-column justify-content-center align-items-center">
                         <Pulse spy={number}>
-                            <BsBell className="cursor-pointer-sort text-orange font-28px" />
+                            <BsBell className="cursor-pointer-sort text-orange font-28px text-sm-white" />
                         </Pulse>
                         <span className="position-absolute">1</span>
                     </Element>
                 </FlexRow>
             </Element>
 
-            <FlexColumn className="w-100 justify-content-center align-items-center mb-5">
+            <FlexColumn className="headings-sm font-helvetica justify-content-center align-items-center w-100 px-3">
+                <h6 className="text-center d-block">Your Wallet</h6>
+                <span className="text-center d-block">Select below assets to send, receive funds.</span>
+            </FlexColumn>
+
+            <FlexColumn className="w-100 justify-content-center align-items-center mb-5" style={{ height: '25%' }}>
                 <img alt="icon" src={Images.icon} className="mb-1" width="50px" />
                 <Element className="font-sf-regular font-30px mb-1" style={{ color: 'var(--darkBlack)' }}>
                     0.00
@@ -66,7 +85,7 @@ const Dashboard = () => {
                     $0.00
                     <sub className="font-11px">USD</sub>
                 </Element>
-                <FlexRow className="w-100 justify-content-center align-items-center">
+                <FlexRow className="w-100 justify-content-center align-items-center top-buttons">
                     
                     <ActionButton title="Send" bgColor="var(--orange)" 
                         action={true} color="text-white" onClick={() => setSendMenu(true)} />
@@ -80,7 +99,7 @@ const Dashboard = () => {
 
             {/* //main content */}
 
-            <Row className="">
+            <Row className="main-content">
 
                 <Col xl={8} lg={8} md={12} sm={12}>
                     

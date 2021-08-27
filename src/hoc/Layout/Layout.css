@@ -5,3 +5,10 @@
     overflow-y: auto;
     overflow-x: hidden;
 }
+
+@media screen and (max-width: 1299px) {
+    .layout-content{
+        transition: all .4s ease-out;
+        width: 100%;
+    }    
+}

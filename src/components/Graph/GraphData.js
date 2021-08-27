@@ -57,7 +57,7 @@ class LineCharts extends Component {
         return(
             
             <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                <div style={{ width: '100%', height: '190px' }}>
+                <div style={{ width: '100%', height: '43%' }}>
                     <Line
                         data={(canvas) => getChartData(canvas)}
                         options={{
